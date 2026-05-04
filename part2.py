@@ -1,4 +1,4 @@
-def dp_stock(M, items):
+def dp_stocks(M, items):
     count = total(items)
 
     dp = [[0 for _ in range(M + 1)] for _ in range(count + 1)]
@@ -23,6 +23,6 @@ if __name__ == "__main__":
     items = [[1, 2], [3, 3], [5, 6], [6, 7]]
     M = 10
 
-    result = dp_stock(M, items)
+    result = dp_stocks(M, items)
 
-    print("Max stocks:", result)
+    print("max stocks: ", result)

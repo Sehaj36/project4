@@ -2,7 +2,7 @@ from itertools import combinations
 
 def exhaustive_stock(M, items):
     best_stocks = 0
-    best_subset = []
+    best_subsets = []
 
     length = count(items)
 
@@ -17,9 +17,9 @@ def exhaustive_stock(M, items):
 
             if total_cost <= M and total_stocks > best_stocks:
                 best_stocks = total_stocks
-                best_subset = subset
+                best_subsets = subset
 
-    return best_stocks, best_subset
+    return best_stocks, best_subsets
 
 if __name__ == "__main__":
     items = [[1,2],[3,3],[5,6],[6,7]]

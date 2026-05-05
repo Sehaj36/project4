@@ -1,8 +1,9 @@
+
 # function figures out the most stocks you can with out going over your budget
 def dp_stocks(M, items):
     count = len(items)
 # made a 2d table the rows will show items and the columns will show the budget
-     dp = [[0 for _ in range(M + 1)] for _ in range(count + 1)]
+    dp = [[0 for _ in range(M + 1)] for _ in range(count + 1)]
 
     for pos in range(1, count + 1):
         stocks = items[pos - 1][0]
@@ -10,7 +11,7 @@ def dp_stocks(M, items):
 # loops from each possible budget
         for budget in range(M + 1):
 # check if the item will fit in the budget
-              if cost <= budget:
+            if cost <= budget:
                 take_item = dp[pos - 1][budget - cost] + stocks
                 skip_item = dp[pos - 1][budget]
 

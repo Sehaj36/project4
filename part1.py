@@ -7,7 +7,7 @@ def exhaustive_stock(M, items):
     #best indices
     best_subsets = []
 
-    length = count(items)
+    length = len(items)
 # goes throught all the subset sizes
     for r in range(length + 1):
 # all pairs of size r
